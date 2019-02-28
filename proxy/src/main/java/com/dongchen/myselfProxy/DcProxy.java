@@ -30,8 +30,8 @@ public class DcProxy {
 		String proxySrc = generateSrc(interfaces[0]);
 
 		//2.输出.java
-		String path = DcProxy.class.getResource("").getPath();
-		File file = new File(path);
+		String fileName = "$Proxy0.java";
+		File file = new File(fileName);
 		FileWriter out = null;
 		try {
 			out = new FileWriter(file);
@@ -110,7 +110,7 @@ public class DcProxy {
 		src.append("}");
 
 
-		return null;
+		return src.toString();
 	}
 
 }

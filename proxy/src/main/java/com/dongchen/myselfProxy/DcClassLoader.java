@@ -25,7 +25,7 @@ public class DcClassLoader extends ClassLoader{
 	protected Class<?> findClass(String name) throws ClassNotFoundException {
 		String className = DcClassLoader.class.getPackage().getName()+"."+name;
 		if (this.baseDir!=null){
-			File classFile = new File(baseDir, name.replaceAll("//.", "/") + ".class");
+			File classFile = new File(name.replaceAll("//.", "/") + ".class");
 			if (classFile.exists()){
 				FileInputStream in = null;
 				ByteArrayOutputStream out = null;

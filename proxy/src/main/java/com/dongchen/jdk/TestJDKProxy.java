@@ -1,5 +1,7 @@
 package com.dongchen.jdk;
 
+import com.dongchen.myselfProxy.DcBroker;
+
 /**
  * @ClassName TestJDKProxy
  * @Description
@@ -10,7 +12,7 @@ package com.dongchen.jdk;
 public class TestJDKProxy {
 
 	public static void main(String[] args) {
-		Person tom = (Person)new Broker().newInstance(new Celebrity("Tom"));
+		Person tom = (Person)new DcBroker().newInstance(new Celebrity("Tom"));
 		tom.speak();
 		System.out.println(tom.getClass());
 	}
