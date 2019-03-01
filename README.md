@@ -7,3 +7,5 @@ proxy : JDK And ciglib
 		Ciglib proxy transfer a reference that created by Ciglib,so I think user can't modify attributes anyway before compile.But user maybe use method that define method with parameters what we want to modify during runtime.
 	same:
 		It's the same way that use bytecode reassembly to implement the dynamic proxy.
+		
+factory : simple and abstract and other
